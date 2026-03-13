@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    overflow: hidden;
+    background-image: url('./Resourses/Garden.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    max-width: 800px;
+}
+
+.cat, .ball {
+ position: absolute;
+ bottom: 20px;
+ width: 200px;
+ height: 250px;
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.dog {
+ position: absolute;
+ bottom: 20px;
+ width: 200px;
+ height: 250px;
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.girl {
+ position: absolute;
+ bottom: 20px;
+ width: 200px;
+ height: 150px;
+ background-size: contain;
+ background-repeat: no-repeat;
+}
+
+.dog {
+ background-image: url('./Resourses/dog\ run2.gif');
+ animation: dog-chase 6s linear infinite;
+}
+
+.cat {
+ background-image: url('./Resourses/Cat_runing.gif');
+ animation: cat-run 6s linear infinite;
+ bottom: -50px;
+}
+
+.ball {
+ background-image: url('./Resourses/ball_bounce.gif');
+ width: 100px;
+ height: 150px;
+ animation: ball-move 5s ease-in-out infinite;
+ z-index: 600;
+}
+
+@keyframes dog-chase {
+ 0% { left: 0; transform: scaleX(1); }
+ 25% { left: 40%; transform: scaleX(1); }
+ 50% { left: 80%; transform: scaleX(-1); }
+ 75% { left: 40%; transform: scaleX(-1); }
+ 100% { left: 0; transform: scaleX(1); }
+}
+
+@keyframes cat-run {
+ 0% { left: 10%; transform: scaleX(1); }
+ 25% { left: 50%; transform: scaleX(1); }
+ 50% { left: 90%; transform: scaleX(-1); }
+ 75% { left: 50%; transform: scaleX(-1); }
+ 100% { left: 10%; transform: scaleX(1); }
+}
+
+@keyframes ball-move {
+ 0% { left: 10%; }
+ 50% { left: 50%; bottom: 80px; }
+ 100% { left: 10%; }
+}
+
+.girl-Dancing {
+ position: fixed;
+ bottom: 70px;
+ right: 300px;
+ width: 300px;
+ height: 400px;
+ background-image: url('./Resourses/Girl_dancing.gif');
+ background-size: contain;
+ background-repeat: no-repeat;
+}
